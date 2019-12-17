@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Sentiment</title>
+</head>
+<body>
+<h1>Sentiment List</h1>
+<hr>
+<ul>
+  <h2>Good</h2>
+  {% for g in good %}
+  <li>{{g.text}}</li>
+  {% endfor %}
+</ul>
+<hr>
+<ul>
+  <h2>Bad</h2>
+  {% for b in bad %}
+  <li>{{b.text}}</li>
+  {% endfor %}
+</ul>
+<hr>
+<form action='.' method="POST"> {% csrf_token %}
+<input type="text" name="text">
+<input type="radio" name="sentiment" value="true"> Good
+<input type="radio" name="sentiment" value="false"> Bad
+<input type="submit" name="submit">
+</form>
+</body>
+</html>
+

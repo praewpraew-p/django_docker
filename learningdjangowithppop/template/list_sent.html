@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sentiment List</title>
+</head>
+<body>
+  <h1>Sentiment</h1>
+  <hr>
+  <ul>
+    <h2>Good</h2>
+    {% for g in good %}
+    <li>{{ g.text }}</li>
+    {% endfor %}
+  </ul>
+  <hr>
+</body>
+</html>
